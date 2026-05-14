@@ -27,4 +27,11 @@ int main() {
     }
     finish = clock();
     printf("%f\n", (double)(finish-start)/CLOCKS_PER_SEC);
+    
+    start = clock();
+    for(int i=0; i<1e7; i++) {
+        update_ptr(&s);
+    }
+    finish = clock();
+    printf("%f\n", (double)(finish-start)/CLOCKS_PER_SEC);
 }
